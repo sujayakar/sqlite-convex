@@ -1,7 +1,7 @@
 import { defineApp } from "convex/server";
-import counter from "@convex-dev/counter/convex.config";
+import sqlite from "sqlite-convex/convex.config";
 
 const app = defineApp();
-app.use(counter);
+app.use(sqlite);
 
 export default app;

@@ -33,10 +33,216 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
 
 .read-the-docs {
   color: #888;
+}
+
+.data-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.data-table td {
+  padding: 8px 12px;
+  border: 1px solid #eee;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.data-table tr:hover {
+  background-color: #f0f0f0;
+}
+
+.sql-input-container {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.input-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.input-row > div:first-child {
+  flex: 1;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-height: 38px;
+}
+
+.pending-statements {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pending-statement {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+}
+
+.statement-code {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.statement-code > div {
+  background: transparent !important;
+}
+
+.execute-btn {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.execute-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.execute-btn:hover:not(:disabled) {
+  background-color: #747bff;
+}
+
+.remove-stmt {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.remove-stmt:hover {
+  color: #ff4444;
+}
+
+/* Optional: Add a custom theme for SQL syntax */
+.token.keyword {
+  color: #0066cc;
+}
+
+.token.string {
+  color: #008000;
+}
+
+.token.number {
+  color: #ff6600;
+}
+
+.token.function {
+  color: #660066;
+}
+
+.token.operator {
+  color: #666666;
+}
+
+.query-input {
+  margin-bottom: 1rem;
+}
+
+.query-input > div {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-height: 38px;
+}
+
+/* Make both editors single line by hiding the newline */
+.query-input textarea,
+.input-row textarea {
+  overflow-y: hidden !important;
+  min-height: 38px !important;
+}
+
+.schema-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.schema-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  background: #f8f9fa;
+}
+
+.schema-header {
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.schema-type {
+  background: #e9ecef;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #495057;
+}
+
+.schema-name {
+  font-weight: bold;
+  color: #495057;
+}
+
+.schema-sql {
+  margin: 0;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #e9ecef;
+  font-family: 'Fira code', 'Fira Mono', monospace;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  color: #666;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  text-align: left;
 }

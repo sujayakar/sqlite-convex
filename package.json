@@ -1,12 +1,5 @@
 {
   "name": "sqlite-convex",
-  "description": "A counter component for Convex.",
-  "repository": "github:get-convex/counter",
-  "homepage": "https://github.com/get-convex/counter#readme",
-  "bugs": {
-    "email": "support@convex.dev",
-    "url": "https://github.com/get-convex/counter/issues"
-  },
   "version": "0.1.0",
   "license": "Apache-2.0",
   "keywords": [
@@ -20,11 +13,11 @@
     "build:cjs": "tsc --project ./commonjs.json && echo '{\\n  \"type\": \"commonjs\"\\n}' > dist/commonjs/package.json",
     "dev": "cd example; npm run dev",
     "typecheck": "tsc --noEmit",
-    "prepare": "npm run build"    
+    "prepare": "npm run build"
   },
   "files": [
     "dist",
-    "src"   
+    "src"
   ],
   "exports": {
     "./package.json": "./package.json",
@@ -74,5 +67,10 @@
   },
   "main": "./dist/commonjs/client/index.js",
   "types": "./dist/commonjs/client/index.d.ts",
-  "module": "./dist/esm/client/index.js"
+  "module": "./dist/esm/client/index.js",
+  "dependencies": {
+    "@types/prismjs": "^1.26.5",
+    "prismjs": "^1.29.0",
+    "react-simple-code-editor": "^0.14.1"
+  }
 }

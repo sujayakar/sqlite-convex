@@ -1,3 +1,4 @@
+// @ts-nocheck
 /*
  ** LICENSE for the sqlite3 WebAssembly/JavaScript APIs.
  **
